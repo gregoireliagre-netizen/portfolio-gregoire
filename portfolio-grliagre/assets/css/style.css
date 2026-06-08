@@ -1237,7 +1237,6 @@ nav {
         /* Ajustement très fin pour iPhone Pro Max */
         letter-spacing: normal !important;
     }
-    /* 3. Centrage du reste du texte et des stats */
     .hero-eyebrow,
     .hero-container p,
     .hero-bottom {
@@ -1246,6 +1245,11 @@ nav {
         max-width: calc(100vw - 40px) !important;
         margin-left: auto !important;
         margin-right: auto !important;
+    }
+
+    /* Ajout de cet espace spécifique pour le texte qui chevauche le menu */
+    .hero-eyebrow {
+        padding-top: 60px !important; /* Ajuste cette valeur (50px, 60px, 70px) */
     }
     .hero-bottom {
         display: flex !important;
