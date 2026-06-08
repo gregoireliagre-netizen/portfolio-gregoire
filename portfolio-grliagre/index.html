@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
 
+<style>
+    /* Cache le contenu au chargement */
+    body { opacity: 0; transition: opacity 0.3s ease; }
+</style>
+<script>
+    // Affiche le contenu dès que la page est prête
+    window.addEventListener('load', () => {
+        document.body.style.opacity = '1';
+    });
+</script>
+    
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grégoire Liagre — Ingénieur Généraliste ICAM</title>
     <meta name="description" content="Portfolio de Grégoire Liagre, Ingénieur Généraliste Icam — Parcours, projets, et personnalité." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link rel="stylesheet" href="assets/css/style.css" />
+    
     <script>
         document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
+    </script>
+
+    <style>
+        body { opacity: 0; transition: opacity 0.3s ease; }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
     </script>
 </head>
 
