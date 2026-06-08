@@ -1203,41 +1203,27 @@ nav {
     }
 }
 
-
-/* <--- C'est ici qu'elle doit fermer */
-
 @media (max-width: 600px) {
-    .hero-title {
-        font-size: clamp(3rem, 12vw, 5rem);
-        /* Ajusté pour ne pas déborder */
-        margin-bottom: 32px;
-    }
-    .phone-number-display {
-        font-size: 1.8rem !important;
-        /* Ajusté pour éviter le retour à la ligne */
-        letter-spacing: 0.05em !important;
-    }
-    .hero-eyebrow {
-        flex-direction: column;
+    /* 1. Centrer le texte sous le titre */
+    .hero-container p {
         text-align: center;
-        gap: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px; /* Ajoute un peu d'espace sur les côtés */
     }
-    .hero-container {
+
+    /* 2. Empiler les stats "24 ANS", "+2 ANS...", etc. */
+    .hero-bottom, 
+    .hero-stats-row { /* Remplace .hero-stats-row par la classe réelle si elle est différente */
+        display: flex;
+        flex-direction: column !important; /* Force la colonne */
         align-items: center;
+        gap: 30px !important; /* Espace vertical entre chaque stat */
+        margin-top: 40px;
+    }
+
+    /* 3. Ajuster la taille du texte des stats pour mobile */
+    .hero-stat-item {
         text-align: center;
-    }
-    .section-title {
-        font-size: 2rem;
-    }
-    .passion-card {
-        flex-direction: column;
-        gap: 16px;
-    }
-    .passion-card-num {
-        font-size: 2.5rem;
-        width: auto;
-    }
-    .certif-list {
-        grid-template-columns: 1fr !important;
     }
 }
