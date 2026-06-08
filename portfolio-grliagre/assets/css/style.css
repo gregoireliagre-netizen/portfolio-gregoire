@@ -1165,8 +1165,11 @@ nav {
         gap: 20px;
     }
     .nav-cta {
-        display: none;
+        display: inline-flex;
+        padding: 6px 12px;
+        font-size: .6rem;
     }
+    /* L'accolade était fermée ici par erreur, je l'ai déplacée tout en bas */
     .hero-meta-row {
         flex-wrap: wrap;
         gap: 24px;
@@ -1200,16 +1203,41 @@ nav {
     }
 }
 
+
+/* <--- C'est ici qu'elle doit fermer */
+
 @media (max-width: 600px) {
     .hero-title {
-        font-size: clamp(4rem, 10vw, 7.5rem);
-        margin-bottom: 48px;
-        max-width: 18ch;
-        margin-left: auto;
-        margin-right: auto;
-        /* AJOUTS POUR LA FLUIDITÉ PARALLAX */
-        will-change: transform, opacity;
-        transition: none;
-        /* Important : on coupe la transition CSS pour laisser la main au JS */
+        font-size: clamp(3rem, 12vw, 5rem);
+        /* Ajusté pour ne pas déborder */
+        margin-bottom: 32px;
+    }
+    .phone-number-display {
+        font-size: 1.8rem !important;
+        /* Ajusté pour éviter le retour à la ligne */
+        letter-spacing: 0.05em !important;
+    }
+    .hero-eyebrow {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    .hero-container {
+        align-items: center;
+        text-align: center;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .passion-card {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .passion-card-num {
+        font-size: 2.5rem;
+        width: auto;
+    }
+    .certif-list {
+        grid-template-columns: 1fr !important;
     }
 }
