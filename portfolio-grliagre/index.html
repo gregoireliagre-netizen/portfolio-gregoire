@@ -1,40 +1,588 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<style>
-    /* Cache le contenu au chargement */
-    body { opacity: 0; transition: opacity 0.3s ease; }
-</style>
-<script>
-    // Affiche le contenu dès que la page est prête
-    window.addEventListener('load', () => {
-        document.body.style.opacity = '1';
-    });
-</script>
-    
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grégoire Liagre — Ingénieur Généraliste ICAM</title>
     <meta name="description" content="Portfolio de Grégoire Liagre, Ingénieur Généraliste Icam — Parcours, projets, et personnalité." />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="assets/css/style.css" />
-    
+
     <script>
         document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
-    </script>
-
-    <style>
-        body { opacity: 0; transition: opacity 0.3s ease; }
-    </style>
-    <script>
-        window.addEventListener('load', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             document.body.style.opacity = '1';
         });
     </script>
+</head>
+
+<body>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <header id="site-header">
+        <div class="container">
+            <nav>
+                <div class="nav-logo-area">
+                    <div class="nav-logo-text">
+                        <a href="#hero">Grég</a>
+                        <button id="theme-toggle" class="theme-toggle-oi" aria-label="Changer de thème">
+                            <span class="oi-thumb"></span>
+                        </button>
+                        <a href="#hero">re<span>.</span></a>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#experience">Parcours & CV</a></li>
+                    <li><a href="#vrai-moi">Le vrai moi</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="assets/CV_Gregoire_Liagre.pdf" target="_blank" download class="nav-cv-btn">Télécharger CV</a>
+                    <a href="mailto:gregoire.liagre@gmail.com" class="nav-cta">
+                        Dispo Sept. 2026
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 10 L10 2 M4 2h6v6"/></svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container hero-container">
+            <div class="hero-eyebrow reveal">
+                <span class="hero-eyebrow-dot"></span>
+                <span class="hero-eyebrow-text">Actuellement apprenti Ingénieur Amélioration Continue chez Heineken (Lille).</span>
+            </div>
+
+            <h1 class="hero-title reveal reveal-delay-1">
+                Ingénieur Généraliste ICAM
+            </h1>
+
+            <div class="hero-bottom reveal reveal-delay-2">
+                <p class="hero-desc">
+                    De nature curieuse et généraliste, j'apprends très rapidement. J'ai eu l'opportunité de travailler dans de nombreux secteurs différents, ce qui m'a permis de développer une forte capacité d'adaptation, d'autant plus dans un contexte international.
+                </p>
+                <div class="hero-meta">
+                    <div class="hero-meta-row">
+                        <div class="hero-stat">
+                            <div class="hero-stat-num">24</div>
+                            <div class="hero-stat-label">Ans</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-num">+2</div>
+                            <div class="hero-stat-label">Ans d'expérience Pro</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-num hero-stat-num--sm">OUI</div>
+                            <div class="hero-stat-label">Permis B</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-num">1er</div>
+                            <div class="hero-stat-label">CDI visé (Sept)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <span class="marquee-item">Amélioration Continue</span>
+            <span class="marquee-item">Data Analysis (SQL / Power BI)</span>
+            <span class="marquee-item">Lean Manufacturing & 5S</span>
+            <span class="marquee-item">Méthode TPM</span>
+            <span class="marquee-item">Conduite du Changement</span>
+            <span class="marquee-item">Prototypage 3D</span>
+            <span class="marquee-item">Supply Chain</span>
+            <span class="marquee-item">Amélioration Continue</span>
+            <span class="marquee-item">Data Analysis (SQL / Power BI)</span>
+            <span class="marquee-item">Lean Manufacturing & 5S</span>
+            <span class="marquee-item">Méthode TPM</span>
+            <span class="marquee-item">Conduite du Changement</span>
+            <span class="marquee-item">Prototypage 3D</span>
+            <span class="marquee-item">Supply Chain</span>
+        </div>
+    </div>
+
+    <section id="experience">
+        <div class="container">
+
+            <div class="section-header section-header--flush reveal">
+                <div>
+                    <p class="text-label">Curriculum Vitae</p>
+                    <h2 class="section-title">Parcours Professionnel</h2>
+                </div>
+            </div>
+
+            <div class="cv-accordion reveal reveal-delay-1">
+
+                <div class="cv-item">
+                    <button class="cv-header">
+                        <div class="cv-header-left">
+                            <div class="cv-role-row">
+                                <span class="cv-role">Ingénieur Amélioration Continue</span>
+                                <span class="cv-type-badge cv-type-badge--alternance">Alternance</span>
+                            </div>
+                            <span class="cv-company">Heineken France · Mons-en-Barœul</span>
+                        </div>
+                        <div class="cv-header-right">
+                            <span class="cv-date">Août 2024 — Aujourd'hui</span>
+                            <div class="cv-icon"></div>
+                        </div>
+                    </button>
+                    <div class="cv-content">
+                        <div class="cv-content-inner">
+                            <ul>
+                                <li><strong>Optimisation :</strong> Amélioration des performances de la chaîne de conditionnement (flux, temps d'arrêt, rendements) via l'analyse de données (SQL, Power BI) et les démarches TPM.</li>
+                                <li><strong>Digitalisation :</strong> Pilotage de projets de digitalisation des opérations (budget 60 k€) en coordination avec des prestataires externes.</li>
+                                <li><strong>Prototypage :</strong> Amélioration des tests qualité par la modélisation 3D, générant 40 k€ d'économies annuelles.</li>
+                                <li><strong>Audit International :</strong> Organisation, audit technique et visite de plus de 10 brasseries en Asie pendant 6 mois.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <button class="cv-header">
+                        <div class="cv-header-left">
+                            <div class="cv-role-row">
+                                <span class="cv-role">Formateur & Consultant IA</span>
+                                <span class="cv-type-badge cv-type-badge--ae">Auto-entrepreneur</span>
+                            </div>
+                            <span class="cv-company">GLC · Lille</span>
+                        </div>
+                        <div class="cv-header-right">
+                            <span class="cv-date">Janvier 2023 — Aujourd'hui</span>
+                            <div class="cv-icon"></div>
+                        </div>
+                    </button>
+                    <div class="cv-content">
+                        <div class="cv-content-inner">
+                            <ul>
+                                <li>Conception et animation de formations en entreprise sur l'usage de l'IA et des outils digitaux pour fiabiliser les processus et les flux d'information.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <button class="cv-header">
+                        <div class="cv-header-left">
+                            <div class="cv-role-row">
+                                <span class="cv-role">Chef de Projet Construction</span>
+                                <span class="cv-type-badge cv-type-badge--intl">Projet International</span>
+                            </div>
+                            <span class="cv-company">Projet Tiny House · Philippines</span>
+                        </div>
+                        <div class="cv-header-right">
+                            <span class="cv-date">2023</span>
+                            <div class="cv-icon"></div>
+                        </div>
+                    </button>
+                    <div class="cv-content">
+                        <div class="cv-content-inner">
+                            <ul>
+                                <li>Pilotage d'un projet de construction d'une maison écologique autonome de 20 m² : planification, approvisionnements et coordination des intervenants.</li>
+                                <li>Gestion d'un budget de 8 000 € et d'un planning de 3 mois, avec optimisation des ressources et des flux matériaux.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <button class="cv-header">
+                        <div class="cv-header-left">
+                            <div class="cv-role-row">
+                                <span class="cv-role">Ingénieur Process Produit</span>
+                                <span class="cv-type-badge cv-type-badge--stage">Stage</span>
+                            </div>
+                            <span class="cv-company">BERGUE Jewelry · Lisbonne</span>
+                        </div>
+                        <div class="cv-header-right">
+                            <span class="cv-date">Mai 2023 — Août 2023</span>
+                            <div class="cv-icon"></div>
+                        </div>
+                    </button>
+                    <div class="cv-content">
+                        <div class="cv-content-inner">
+                            <ul>
+                                <li>Accompagnement d'une clientèle internationale dans la personnalisation et le développement de bijoux sur mesure, en assurant un suivi direct des demandes et des exigences esthétiques.</li>
+                                <li>Collaboration avec les artisans joailliers et graveurs pour l'intégration de pierres précieuses, le sertissage et la réalisation de pièces personnalisées.</li>
+                                <li>Conception et prototypage de bijoux à l'aide des technologies de modélisation et d'impression 3D, dans le respect des standards de qualité du secteur du luxe.</li>
+                                <li>Participation aux différentes étapes de fabrication selon le procédé de la cire perdue, de la création du modèle jusqu'à la préparation pour la production.</li>
+                                <li>Contribution au développement de pièces alliant innovation technologique et savoir-faire artisanal, en garantissant précision, qualité et satisfaction client.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <button class="cv-header">
+                        <div class="cv-header-left">
+                            <div class="cv-role-row">
+                                <span class="cv-role">Responsable Production & Supply Chain</span>
+                                <span class="cv-type-badge cv-type-badge--whv">WHV</span>
+                            </div>
+                            <span class="cv-company">Boulangerie Artisanale · Australie</span>
+                        </div>
+                        <div class="cv-header-right">
+                            <span class="cv-date">2022</span>
+                            <div class="cv-icon"></div>
+                        </div>
+                    </button>
+                    <div class="cv-content">
+                        <div class="cv-content-inner">
+                            <ul>
+                                <li><strong>Optimisation Opérationnelle :</strong> Restructuration complète de la chaîne de production et de distribution dans un environnement à forte cadence, en autonomie totale (2h - 15h).</li>
+                                <li><strong>Digitalisation des flux :</strong> Suppression du suivi papier au profit d'un outil de suivi de production digitalisé, permettant une meilleure traçabilité et une réduction des erreurs.</li>
+                                <li><strong>Gestion de la Supply Chain :</strong> Pilotage de bout en bout : de la production en atelier jusqu'à la livraison et la vente sur les marchés locaux.</li>
+                                <li><strong>Adaptabilité :</strong> Intégration rapide dans un environnement international exigeant, démontrant une forte capacité de résolution de problèmes et une aisance relationnelle immédiate.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section-header section-header--flush reveal" style="margin-top: 100px;">
+                <h2 class="section-title">Formation</h2>
+            </div>
+
+            <div class="cv-accordion reveal reveal-delay-1">
+                <div class="cv-item" style="border-bottom: none;">
+                    <button class="cv-header">
+                        <div class="cv-header-left">
+                            <span class="cv-role">Diplôme d'Ingénieur Généraliste</span>
+                            <span class="cv-company">Icam Lille — École d'ingénieurs</span>
+                        </div>
+                        <div class="cv-header-right">
+                            <span class="cv-date">2020 — 2026</span>
+                            <div class="cv-icon"></div>
+                        </div>
+                    </button>
+                    <div class="cv-content">
+                        <div class="cv-content-inner">
+                            <p>
+                                L'Icam fait partie des grandes écoles d'ingénieurs françaises et forme des ingénieurs généralistes capables de s'adapter à n'importe quel secteur d'activité. Le cursus est conçu pour en faire des profils polyvalents, capables de prendre la main sur un
+                                sujet nouveau et de se l'approprier rapidement.
+                            </p>
+                            <ul>
+                                <li><strong>Parcours Ouvert (4 ans) :</strong> Formation scientifique et technique dense, couvrant les mathématiques appliquées, la mécanique, l'électronique, l'informatique industrielle, la thermodynamique, la gestion de projet
+                                    et le management. Pas de spécialisation imposée — la force de l'ICAM est précisément de former des esprits capables de comprendre vite et d'apporter de la valeur dans des environnements très différents.</li>
+                                <li><strong>Parcours Apprentissage (2 dernières années) :</strong> Intégration en entreprise à temps partagé via un contrat d'apprentissage. Cette formule permet de mettre en pratique, semaine après semaine, les compétences
+                                    acquises en école — et d'arriver diplômé avec une vraie expérience terrain.</li>
+                                <li><strong>Échanges et Projets Internationaux :</strong> Année d'échange académique à l'<strong>Ateneo de Manila University</strong> (Philippines), classée parmi les institutions les plus prestigieuses du pays, développant
+                                    une forte aisance interculturelle. Pour mon projet de fin d'études (mémoire), réalisation d'une immersion industrielle au travers de <strong>10 brasseries</strong> visitées au Japon, en Indonésie et au Vietnam, axée
+                                    sur l'analyse comparative des processus de production et l'optimisation de la supply chain.</li>
+                                <li><strong>Projets transverses :</strong> Nombreux projets de groupe simulant des contextes industriels réels, avec gestion des parties prenantes, budget et planning.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header section-header--flush reveal" style="margin-top: 80px;">
+                <h2 class="section-title">Certifications</h2>
+            </div>
+
+            <div class="certif-list reveal reveal-delay-1">
+                <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/KD8E8B8QNVY6" target="_blank" class="certif-item certif-item--link">
+                    <div class="certif-issuer-row">
+                        <span class="certif-issuer-dot" style="background: #4285F4;"></span>
+                        <span class="certif-issuer-name">Google</span>
+                    </div>
+                    <span class="certif-title">IT Automation with Python</span>
+                    <span class="certif-meta">Avr. 2025 · <span class="certif-id">KD8E8B8QNVY6</span></span>
+                    <span class="certif-arrow">→</span>
+                </a>
+                <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/3US38PMWKK56" target="_blank" class="certif-item certif-item--link">
+                    <div class="certif-issuer-row">
+                        <span class="certif-issuer-dot" style="background: #054ADA;"></span>
+                        <span class="certif-issuer-name">IBM</span>
+                    </div>
+                    <span class="certif-title">Data Analyst</span>
+                    <span class="certif-meta">Juin 2025 · <span class="certif-id">3US38PMWKK56</span></span>
+                    <span class="certif-arrow">→</span>
+                </a>
+                <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/25NDBITUCZY3" target="_blank" class="certif-item certif-item--link">
+                    <div class="certif-issuer-row">
+                        <span class="certif-issuer-dot" style="background: #000066;"></span>
+                        <span class="certif-issuer-name">HEC Paris</span>
+                    </div>
+                    <span class="certif-title">Investment Management in Evolving Markets</span>
+                    <span class="certif-meta">Juil. 2025 · <span class="certif-id">25NDBITUCZY3</span></span>
+                    <span class="certif-arrow">→</span>
+                </a>
+                <a href="https://www.insidelvmh.com/certificate/73ee86e6-a3d1-463c-b15b-0963109d4890" target="_blank" class="certif-item certif-item--link">
+                    <div class="certif-issuer-row">
+                        <span class="certif-issuer-dot" style="background: #c8aa6e;"></span>
+                        <span class="certif-issuer-name">LVMH</span>
+                    </div>
+                    <span class="certif-title">Inside LVMH Certificate</span>
+                    <span class="certif-meta">Nov. 2025 · <span class="certif-id">42e8c8de</span></span>
+                    <span class="certif-arrow">→</span>
+                </a>
+                <a href="https://badges.plus.columbia.edu/b6084b6f-3b8c-4b1e-af64-6e53f1370736" target="_blank" class="certif-item certif-item--link">
+                    <div class="certif-issuer-row">
+                        <span class="certif-issuer-dot" style="background: #003087;"></span>
+                        <span class="certif-issuer-name">Columbia University</span>
+                    </div>
+                    <span class="certif-title">Learning AI Through Visualization</span>
+                    <span class="certif-meta">Mai 2025 · <span class="certif-id">146809836</span></span>
+                    <span class="certif-arrow">→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <div class="container">
+            <div class="divider-inner reveal">
+                <span class="divider-label text-label">L'ingénieur</span>
+                <div class="divider-line"></div>
+                <span class="divider-label text-label">L'homme</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="vrai-moi" class="vrai-moi-section">
+        <div class="container">
+
+            <div class="vrai-moi-header reveal">
+                <p class="text-label vrai-moi-eyebrow">Derrière l'ingénieur</p>
+                <h2 class="vrai-moi-title">Le vrai<br><em>Moi.</em></h2>
+                <p class="vrai-moi-intro">
+                    Parce que les diplômes ne racontent qu'une partie de l'histoire, voici ce qui me construit au quotidien.
+                </p>
+            </div>
+
+            <div class="passions-grid">
+
+                <div class="passion-card reveal">
+                    <div class="passion-card-body">
+                        <img src="assets/img/passion-moto.jpg" alt="Road trip moto Philippines" class="passion-img" />
+                        <h3 class="passion-card-title">Exploration & Asie</h3>
+                        <p class="passion-card-text">Avec plus de 28 pays visités à travers le monde, mon goût pour l'international a forgé une forte adaptabilité culturelle, avec une appétence toute particulière pour l'Asie. Ma plus grande aventure récente ? Un road trip moto engagé
+                            en solitaire de 3 000 km à travers l'île de Luzon, aux Philippines. L'inconnu est le meilleur des formateurs.</p>
+                    </div>
+                </div>
+
+                <div class="passion-card reveal reveal-delay-1">
+                    <div class="passion-card-body">
+                        <img src="assets/img/passion-plongee.jpg" alt="Plongée sous-marine" class="passion-img" />
+                        <h3 class="passion-card-title">Plongée Sous-Marine</h3>
+                        <p class="passion-card-text">Plongeur certifié avec plus d'une quarantaine de descentes à mon actif dans des conditions très variées. Sous la surface, l'erreur n'a pas sa place : j'y ai développé une excellente gestion du stress, une maîtrise stricte des protocoles
+                            de sécurité et une grande rigueur technique.</p>
+                    </div>
+                </div>
+
+                <div class="passion-card reveal reveal-delay-2">
+                    <div class="passion-card-body">
+                        <img src="assets/img/passion-finance.jpg" alt="Finance et chiffres" class="passion-img" />
+                        <h3 class="passion-card-title">L'Art des Chiffres & Finance</h3>
+                        <p class="passion-card-text">Passionné par la finance et l'analyse de données, un véritable virus qui m'a été transmis par mon père, contrôleur de gestion. J'aime faire parler les chiffres, analyser la santé des systèmes et structurer l'information pour prendre
+                            des décisions rationnelles et éclairées.</p>
+                    </div>
+                </div>
+
+                <div class="passion-card reveal">
+                    <div class="passion-card-body">
+                        <img src="assets/img/passion-horloge.jpg" alt="Horlogerie mécanique" class="passion-img" />
+                        <h3 class="passion-card-title">Horlogerie & Précision</h3>
+                        <p class="passion-card-text">Passionné d'horlogerie et entièrement autodidacte dans ce domaine. Je prends plaisir à démonter, nettoyer, remonter et entretenir différents mouvements mécaniques, ainsi qu'à remplacer certaines pièces. Une discipline qui demande
+                            patience, minutie et rigueur — où chaque détail compte.</p>
+                    </div>
+                </div>
+
+                <div class="passion-card reveal reveal-delay-1">
+                    <div class="passion-card-body">
+                        <img src="assets/img/passion-auto.JPG" alt="Automobile ancienne" class="passion-img" />
+                        <h3 class="passion-card-title">Héritage Automobile</h3>
+                        <p class="passion-card-text">Baigné dans cet univers depuis toujours grâce à un oncle collectionneur de véhicules anciens. Plus que la mécanique brute, ce sont les anecdotes historiques, le contexte de création, le design de l'époque et l'âme derrière chaque
+                            voiture qui me fascinent.</p>
+                    </div>
+                </div>
+
+                <div class="passion-card reveal reveal-delay-2">
+                    <div class="passion-card-body">
+                        <img src="assets/img/passion-drone.jpg" alt="Drone FPV photographie aérienne" class="passion-img" />
+                        <h3 class="passion-card-title">Précision & Focalisation</h3>
+                        <p class="passion-card-text">Licencié en club de tir sportif à Lille et pilote passionné de photographie aérienne sur drone FPV. Deux disciplines très différentes qui exigent pourtant exactement la même chose : une concentration absolue, un relâchement total
+                            et une grande précision.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-contact">
+                <p class="text-label">Contactez-moi</p>
+                <h2 class="footer-title reveal">Travaillons ensemble</h2>
+                <a href="mailto:gregoire.liagre@gmail.com" class="footer-email-btn reveal reveal-delay-1">
+                    gregoire.liagre@gmail.com
+                    <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12 L12 2 M5 2h7v7"/></svg>
+                </a>
+                <div class="phone-anim-wrap reveal reveal-delay-2">
+                    <span id="anim-phone" data-phone="07 67 87 08 11" class="phone-number-display">00 00 00 00 00</span>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copy">© 2026 Grégoire Liagre · ICAM Lille</span>
+                <a href="https://linkedin.com/in/liagre" target="_blank" class="footer-linkedin">LinkedIn ↗</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const dot = document.getElementById('cursor-dot');
+        const ring = document.getElementById('cursor-ring');
+        let mouseX = 0,
+            mouseY = 0,
+            ringX = 0,
+            ringY = 0;
+
+        document.addEventListener('mousemove', e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            dot.style.left = mouseX + 'px';
+            dot.style.top = mouseY + 'px';
+        });
+
+        (function animateRing() {
+            ringX += (mouseX - ringX) * .12;
+            ringY += (mouseY - ringY) * .12;
+            ring.style.left = ringX + 'px';
+            ring.style.top = ringY + 'px';
+            requestAnimationFrame(animateRing);
+        })();
+
+        document.querySelectorAll('a, button, .cv-header').forEach(el => {
+            el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+            el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+
+        const header = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 20);
+        }, {
+            passive: true
+        });
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const heroTitle = document.querySelector('.hero-title');
+        let ticking = false;
+        if (heroTitle) heroTitle.style.transition = 'none';
+
+        window.addEventListener('scroll', () => {
+            if (!heroTitle || ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                const y = window.scrollY;
+                heroTitle.style.transform = `translateY(${y * .18}px)`;
+                heroTitle.style.opacity = Math.max(1 - y / 500, 0);
+                ticking = false;
+            });
+        }, {
+            passive: true
+        });
+
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+
+        document.querySelectorAll('.cv-header').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const content = btn.nextElementSibling;
+                const isOpen = item.classList.contains('active');
+
+                document.querySelectorAll('.cv-item').forEach(el => {
+                    el.classList.remove('active');
+                    el.querySelector('.cv-content').style.maxHeight = '0px';
+                });
+
+                if (!isOpen) {
+                    item.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            });
+        });
+
+        const phoneEl = document.getElementById('anim-phone');
+        if (phoneEl) {
+            const target = phoneEl.dataset.phone;
+            const digits = '0123456789';
+            let animated = false;
+
+            new IntersectionObserver(([entry]) => {
+                if (!entry.isIntersecting || animated) return;
+                animated = true;
+                let i = 0;
+                const steps = 30;
+                const interval = setInterval(() => {
+                    phoneEl.innerText = target.split('').map((char, idx) => {
+                        if (char === ' ') return ' ';
+                        return idx < (i / steps) * target.length ?
+                            target[idx] :
+                            digits[Math.floor(Math.random() * 10)];
+                    }).join('');
+                    if (++i > steps) {
+                        clearInterval(interval);
+                        phoneEl.innerText = target;
+                    }
+                }, 60);
+            }, {
+                threshold: 0.5
+            }).observe(phoneEl);
+        }
+
+        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+        new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(link => {
+                    link.classList.toggle('nav-active', link.getAttribute('href') === '#' + entry.target.id);
+                });
+            });
+        }, {
+            rootMargin: '-30% 0px -60% 0px'
+        }).observe(
+            ...document.querySelectorAll('section[id]')
+        );
+    </script>
+
+</body>
+
+</html>    </script>
 </head>
 
 <body>
