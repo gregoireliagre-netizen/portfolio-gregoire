@@ -406,9 +406,11 @@ nav {
     min-height: 100svh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 80px;
+    /* On change justify-content pour que le contenu se place naturellement */
+    justify-content: center;
     padding-top: 120px;
+    padding-bottom: 120px;
+    /* On augmente le padding ici pour créer de l'air */
     position: relative;
     overflow: hidden;
 }
@@ -503,7 +505,8 @@ nav {
 
 .hero-scroll-indicator {
     position: absolute;
-    bottom: 36px;
+    bottom: 20px;
+    /* On le colle plus bas, tout en bas de la section */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
