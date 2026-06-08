@@ -1216,11 +1216,13 @@ nav {
 
     /* Force le titre à ne pas déborder */
     .hero-title {
-        font-size: 3.5rem !important;
-        line-height: 1 !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
     /* Force les éléments du bas (stats) à s'empiler */
