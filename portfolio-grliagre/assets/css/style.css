@@ -1204,21 +1204,23 @@ nav {
 }
 
 @media (max-width: 600px) {
-    /* 1. Correction du Titre "Ingénieur Généraliste ICAM" */
-    .hero-title {
-        /* Taille dynamique qui s'adapte à l'écran : min 2rem, idéal 8vw, max 3.2rem */
-        font-size: clamp(2rem, 8vw, 3.2rem) !important;
-        /* Force le texte à s'ajuster proprement, sans couper les mots */
-        width: 100% !important;
-        max-width: calc(100vw - 30px) !important;
-        /* Laisse 15px de marge de sécurité */
+  .hero-title {
+        /* On utilise 'vw' uniquement pour la largeur, pas pour la taille de police */
+        font-size: 2.2rem !important; 
+        
+        /* C'est ici la clé : on autorise le titre à être plus petit que 100% si besoin */
+        width: 90% !important; 
+        max-width: 90% !important;
+        
         margin-left: auto !important;
         margin-right: auto !important;
+        
         text-align: center !important;
-        padding: 0 !important;
-        /* Empêche les mots de déborder (critique pour "Généraliste") */
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
+        
+        /* Empêche la coupure forcée des mots */
+        word-break: normal !important; 
+        hyphens: none !important;
+        white-space: normal !important;
     }
     /* 2. Correction du Numéro de Téléphone (Le rendre lisible) */
     .phone-number-display {
